@@ -124,7 +124,8 @@ export default function Hero({ onEnroll }) {
           </motion.h1>
 
           <motion.p className="hero-desc" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }}>
-            Tamil Nadu's premier tuition centre for Mathematics &amp; Science. 
+            Tamil Nadu's premier tuition centre for Mathematics &amp; Science, led by{' '}
+            <strong style={{ color: 'var(--secondary-light)' }}>Caleb Messiah</strong>.{' '}
             Samacheer Kalvi &amp; CBSE curriculum | Classes 1 to 12 | SSLC &amp; HSC Specialists
           </motion.p>
 

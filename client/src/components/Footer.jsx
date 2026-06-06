@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="footer-desc">
-              Tamil Nadu's premier tuition centre for Mathematics and Science. Empowering students from Std 1 to Std 12 with excellence in education since 2010.
+              Tamil Nadu's premier tuition centre for Mathematics and Science, founded and led by <strong style={{color:'rgba(212,168,67,0.9)'}}>Caleb Messiah</strong>. Empowering students from Std 1 to Std 12 with excellence in education since 2010.
             </p>
             <div className="footer-social">
               {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube].map((Icon, i) => (

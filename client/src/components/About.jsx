@@ -21,7 +21,7 @@ export default function About() {
             Tamil Nadu's Trusted <span className="gold-text">Maths Academy</span>
           </h2>
           <p className="section-subtitle">
-            For over 15 years, we've been helping students across Tamil Nadu master Mathematics and Science
+            For over 15 years, <strong>Caleb Messiah</strong> and the Learn+ team have been helping students across Tamil Nadu master Mathematics and Science
             with a proven teaching methodology that delivers exceptional results.
           </p>
         </div>
@@ -73,9 +73,47 @@ export default function About() {
             <div className="stat-block-label">Maths Tuition in TN</div>
           </div>
         </motion.div>
+
+        {/* Tutor Profile */}
+        <motion.div
+          className="tutor-profile"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="tutor-avatar">
+            <span className="tutor-initials">CM</span>
+          </div>
+          <div className="tutor-info">
+            <div className="tutor-label">Your Tutor at <span className="learn-plus-name">Learn<span className="lp-plus">+</span></span></div>
+            <h3 className="tutor-name">Caleb Messiah</h3>
+            <p className="tutor-bio">
+              With 15+ years of teaching experience across Samacheer Kalvi and CBSE curricula, Caleb Messiah has guided thousands of students to top marks in SSLC and HSC board exams. His bilingual, concept-first methodology makes Mathematics and Science approachable for every learner.
+            </p>
+            <div className="tutor-badges">
+              <span className="tutor-badge">15+ Years Experience</span>
+              <span className="tutor-badge">Maths &amp; Science</span>
+              <span className="tutor-badge">SSLC &amp; HSC Expert</span>
+              <span className="tutor-badge">Bilingual Teaching</span>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       <style>{`
+        .tutor-profile { display: flex; align-items: flex-start; gap: 32px; margin-top: 60px; padding: 40px; background: var(--bg-card); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid rgba(212,168,67,0.15); position: relative; overflow: hidden; }
+        .tutor-profile::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-gold); }
+        .tutor-avatar { width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--primary-light)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 8px 28px rgba(26,54,93,0.25); border: 4px solid rgba(212,168,67,0.3); }
+        .tutor-initials { font-size: 2rem; font-weight: 800; color: var(--secondary); letter-spacing: -1px; }
+        .tutor-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); font-weight: 600; margin-bottom: 6px; }
+        .learn-plus-name { font-weight: 800; color: var(--primary); }
+        .lp-plus { color: var(--secondary); }
+        .tutor-name { font-size: 1.7rem; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+        .tutor-bio { font-size: 0.95rem; color: var(--text-light); line-height: 1.8; margin-bottom: 18px; max-width: 600px; }
+        .tutor-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tutor-badge { padding: 5px 14px; border-radius: 100px; background: rgba(26,54,93,0.07); border: 1px solid rgba(26,54,93,0.12); font-size: 0.8rem; font-weight: 600; color: var(--primary); }
+        @media (max-width: 640px) { .tutor-profile { flex-direction: column; align-items: center; text-align: center; padding: 28px 20px; } .tutor-bio { max-width: 100%; } .tutor-badges { justify-content: center; } }
         .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
         .about-card { background: var(--bg-card); border-radius: var(--radius-md); padding: 36px 32px; box-shadow: var(--shadow-sm); border: 1px solid rgba(26,54,93,0.04); transition: all 0.3s ease; position: relative; overflow: hidden; }
         .about-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient-gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
